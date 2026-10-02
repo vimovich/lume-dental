@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+  <!-- @include head -->
+  <title>Технологии — цифровая стоматология Lumé Dental</title>
+  <meta name="description" content="3D-томография, интраоральный сканер, операционный микроскоп, CAD/CAM-лаборатория и цифровой дизайн улыбки." />
+  <link rel="preload" href="/assets/tooth.bin" as="fetch" crossorigin />
+</head>
+<body style="background:var(--graphite)">
+  <!-- @include header -->
+  <main id="main">
+    <section class="scan dark" data-scan aria-labelledby="t-title">
+      <script type="application/json">[
+        {"eyebrow":"Цифровая стоматология","title":"Технологии,<br>которые видят<br>больше","desc":"Каждое решение в Lumé основано на точных данных: 3D-снимках, цифровых слепках и увеличении до 25 раз."},
+        {"eyebrow":"CBCT · 75 мкм","title":"3D-томография<br>за 12 секунд","desc":"Видим кость, корни и нервы в объёме — и планируем лечение без догадок."},
+        {"eyebrow":"CAD/CAM","title":"Коронка<br>за один день","desc":"Сканируем, моделируем и фрезеруем керамику в собственной лаборатории, пока вы пьёте кофе."}
+      ]</script>
+      <div class="container">
+        <nav class="crumbs" aria-label="Хлебные крошки" style="padding-top:32px"><a href="/">Главная</a><span>Технологии</span></nav>
+        <div class="scan__grid" style="padding-top:clamp(28px,4vw,56px)">
+          <div class="scan__copy">
+            <span class="eyebrow swap" data-slot="eyebrow">Цифровая стоматология</span>
+            <h1 class="h1 swap" id="t-title" data-slot="title">Технологии,<br>которые видят<br>больше</h1>
+            <p class="lead swap" data-slot="desc">Каждое решение в Lumé основано на точных данных: 3D-снимках, цифровых слепках и увеличении до 25 раз.</p>
+            <div><button class="btn btn--gold" data-book>Пройти 3D-диагностику <span class="arr">→</span></button></div>
+          </div>
+          <div class="scan__stage">
+            <div class="ruler" aria-hidden="true"><svg viewBox="0 0 46 400" preserveAspectRatio="none"><line x1="44" y1="0" x2="44" y2="400" /><g id="ticks"></g></svg><span class="ruler__mark" data-ruler-mark data-v="0.0 мм" style="top:94%"></span></div>
+            <span class="hud-corner tl"></span><span class="hud-corner tr"></span><span class="hud-corner bl"></span><span class="hud-corner br"></span>
+            <div class="readout readout--a" aria-hidden="true">X <b data-ro>12.4</b><br />Y <b data-ro>08.1</b><br />Δ <b data-ro>0.020</b> мм</div>
+            <div class="readout readout--b" aria-hidden="true">MODE: CBCT · 3D<br />RES: 75 µm</div>
+            <div class="scan__canvas" data-scan-canvas></div>
+            <div class="scan__fallback"><img src="/img/tooth-holo.webp" alt="" width="640" height="640" /></div>
+          </div>
+          <div class="hud" aria-hidden="true">
+            <div class="panel">
+              <div class="panel__h">Сканирование <i></i></div>
+              <div class="gauge">
+                <svg viewBox="0 0 120 96"><path d="M14 84 A46 46 0 1 1 106 84" fill="none" stroke="rgba(143,220,255,.15)" stroke-width="6" stroke-linecap="round" /><path data-gauge-arc d="M14 84 A46 46 0 1 1 106 84" fill="none" stroke="#8fdcff" stroke-width="6" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset=".5" style="filter:drop-shadow(0 0 4px #8fdcff)" /></svg>
+                <div class="gauge__v"><span data-gauge-v>50%</span><small>Покрытие</small></div>
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel__h">Анализ эмали</div>
+              <div class="mini"><div class="mini__img"><img src="/img/tooth-solid-b.webp" alt="" width="640" height="640" /></div><div><b>Плотность в норме</b>98,2% · без трещин<div class="bar"><i data-bar></i></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="scan__tabs" data-tabs role="tablist" aria-label="Технологии">
+          <button class="scan__tab is-active" data-tab role="tab" aria-selected="true"><span>01</span>Обзор<i></i></button>
+          <button class="scan__tab" data-tab role="tab" aria-selected="false"><span>02</span>3D-томография<i></i></button>
+          <button class="scan__tab" data-tab role="tab" aria-selected="false"><span>03</span>CAD/CAM<i></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec dark" style="padding-top:clamp(40px,5vw,80px)">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <div><span class="eyebrow">Оснащение</span><h2 class="h2">Оборудование экспертного класса</h2></div>
+          <p class="lead">Мы инвестируем в технологии, чтобы лечение было точнее, быстрее и комфортнее для вас.</p>
+        </div>
+        <div class="tech-grid">
+          <article class="tcard" data-reveal><span class="tcard__k">CBCT</span><h3>3D-томограф</h3><p>Объёмный снимок обеих челюстей за 12 секунд с минимальной лучевой нагрузкой.</p><div class="tcard__v"><b>75</b>мкм — разрешение</div></article>
+          <article class="tcard" data-reveal style="--d:.06s"><span class="tcard__k">Intraoral scan</span><h3>Интраоральный сканер</h3><p>Цифровой слепок без оттискной массы и рвотного рефлекса — за 3 минуты.</p><div class="tcard__v"><b>3</b>мин — скан челюсти</div></article>
+          <article class="tcard" data-reveal style="--d:.12s"><span class="tcard__k">Microscope</span><h3>Операционный микроскоп</h3><p>Лечение каналов и реставрации с увеличением, недоступным невооружённому глазу.</p><div class="tcard__v"><b>×25</b>увеличение</div></article>
+          <article class="tcard" data-reveal><span class="tcard__k">CAD/CAM</span><h3>Цифровая лаборатория</h3><p>Моделирование и фрезеровка керамических коронок и вкладок прямо в клинике.</p><div class="tcard__v"><b>1</b>день — коронка</div></article>
+          <article class="tcard" data-reveal style="--d:.06s"><span class="tcard__k">DSD</span><h3>Цифровой дизайн улыбки</h3><p>Моделируем улыбку по пропорциям лица и показываем результат до лечения.</p><div class="tcard__v"><b>3D</b>превью результата</div></article>
+          <article class="tcard" data-reveal style="--d:.12s"><span class="tcard__k">Comfort</span><h3>Компьютерная анестезия</h3><p>Система The Wand вводит анестетик медленно и точечно — без боли от укола.</p><div class="tcard__v"><b>0</b>неприятных ощущений</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec dark" style="background:#121417">
+      <div class="container">
+        <div class="sec-head" data-reveal>
+          <div><span class="eyebrow">Цифровой протокол</span><h2 class="h2">Путь от скана до улыбки</h2></div>
+        </div>
+        <ol class="flow" data-reveal>
+          <li><span>01 · 15 мин</span><b>Сканирование</b><p>КТ и интраоральный скан — полная цифровая копия зубов.</p></li>
+          <li><span>02 · 1 день</span><b>Планирование</b><p>Врач и техник строят план лечения и дизайн улыбки.</p></li>
+          <li><span>03 · 20 мин</span><b>Примерка</b><p>Вы видите и «примеряете» результат во рту — mock-up.</p></li>
+          <li><span>04 · 1–2 визита</span><b>Лечение</b><p>Работаем по шаблонам и под микроскопом — точно по плану.</p></li>
+          <li><span>05 · навсегда</span><b>Архив</b><p>Ваши сканы хранятся — любые изменения видны на контроле.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="sec dark">
+      <div class="container">
+        <div class="frow" data-reveal style="border-top:0">
+          <div class="frow__ph ph"><img src="IMG(1770321119305-f191c09c5801,1200,960)" alt="Стоматологическое оборудование с монитором" loading="lazy" /></div>
+          <div class="frow__copy">
+            <span class="frow__n">Lumé Lab</span>
+            <h2 class="h2">Своя лаборатория — контроль качества на каждом этапе</h2>
+            <p class="lead">Врач и зубной техник работают в одной команде и в одном здании. Это ускоряет сроки и позволяет довести каждую реставрацию до идеала.</p>
+            <ul class="ticks"><li>Фрезерный станок 5 осей и печь синтеризации</li><li>Цветокоррекция под естественный оттенок зубов</li><li>Срок изготовления — от 1 дня</li></ul>
+          </div>
+        </div>
+        <div class="nums" data-reveal style="margin-top:clamp(40px,5vw,72px)">
+          <div><b data-count="75">75</b><span>мкм — точность 3D-снимка</span></div>
+          <div><b data-count="25" data-suf="×">25×</b><span>увеличение микроскопа</span></div>
+          <div><b data-count="3">3</b><span>минуты на цифровой слепок</span></div>
+          <div><b data-count="98" data-suf="%">98%</b><span>приживаемость имплантов</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- @include footer -->
+  <script>
+    (function () {
+      var g = document.getElementById('ticks'); if (!g) return; var s = '';
+      for (var i = 0; i <= 40; i++) { var y = 400 - i * 10, big = i % 5 === 0; s += '<line x1="' + (big ? 30 : 37) + '" y1="' + y + '" x2="44" y2="' + y + '"/>'; if (big) s += '<text x="0" y="' + (y + 3) + '">' + (i * 0.6).toFixed(0) + '</text>'; }
+      g.innerHTML = s;
+    })();
+  </script>
+</body>
+</html>
