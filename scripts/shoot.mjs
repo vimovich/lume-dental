@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const [,, url, out, w='800', h='800', bg='transparent'] = process.argv;
+const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', args: ['--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader','--ignore-gpu-blocklist'] });
+const p = await b.newPage({ viewport: { width: +w, height: +h } });
+p.on('console', m => { if (m.type()==='error') console.log('console:', m.text()); });
+p.on('pageerror', e => console.log('pageerror:', e.message));
+await p.goto(url, { waitUntil: 'networkidle' });
+await p.waitForTimeout(1500);
+await p.screenshot({ path: out, omitBackground: bg==='transparent', fullPage: process.env.FULL==='1' });
+await b.close();
